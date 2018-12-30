@@ -20,8 +20,9 @@ Follow the CSS methodology up above (in short, style the raw elements as much as
 - `/partials/_base.scss`
 - `/partials/_whateverelseyouwant.scss`
 - Finally, include the `_index` partial in the style.scss file
-3. When you encounter class names with multiple words, use `-` and not `_`, and leave the whole string lowercase.
+3. When you encounter class names with multiple words, use `-` and not `_` as seperators, and leave the whole string lowercase.
 4. Nest where you can in the SCSS
+5. Whenever you call an SCSS variable, include the native CSS var as well beneath it.
 
 ## Gotchas/Tips
 * The styles for the buttons exist under: /src/partials/forms/partials/. I did this (instead of putting them under base) because usually when you're coding buttons, they're in forms. I might change this later, but for right now, that's where they are
@@ -32,6 +33,6 @@ Follow the CSS methodology up above (in short, style the raw elements as much as
 * Write the code :)
 * Automate #2 from Naming/Coding Conventions (just a little rust script to include?)
 
-## Authors
+## Author(s)
 
 * **Adam McGurk** - Lead Developer: Shine Solar amcgurk@shinesolar.com

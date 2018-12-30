@@ -1,0 +1,51 @@
+$shine-orange: #ff6900; // Shine Brand Orange
+$shine-brand-blue: #485d6c; // Shine Brand Blue
+$shine-light-orange: #f56500; // shine light orange
+$shine-dark-orange: #b34900; // Shine dark orange
+$shine-dark-gray: #555555; // The dark gray from the footer
+$shine-light-gray: #7a7a7a; // The light gray shade
+$shine-blue: #303d46; // Deep complimentary blue
+$shine-blue-gray: #f3f4f5; // Shine light grayish blue
+$red: red;
+$green: #90c05c;
+$heavy-font: 'Fjalla One', 'trebuchet ms', sans-serif;
+$main-font: 'Rubik', 'trebuchet ms', sans-serif;
+$top-level-width: 95%;
+$border-radius: 2px;
+
+:root {
+	--shine-orange: $shine-orange;
+	--shine-brand-blue: $shine-brand-blue;
+	--shine-light-orange: $shine-light-orange;
+	--shine-dark-orange: $shine-dark-orange;
+	--shine-dark-gray: $shine-dark-gray;
+	--shine-light-gray: $shine-light-gray;
+	--shine-blue: $shine-blue;
+	--shine-blue-gray: $shine-blue-gray;
+	--red: $red;
+	--green: $green;
+	--heavy-font: $heavy-font;
+	--main-font: $main-font;
+	--top-level-width: $top-level-width;
+	--border-radius: $border-radius;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	border: none;
+	&:focus {
+		outline: none;
+	}
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background-color: $shine-blue-gray;
+	background-color: var(--shine-blue-gray);
+}
