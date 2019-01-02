@@ -1,0 +1,27 @@
+a.button
+,button
+,input[type=submit] {
+	border-radius: $border-radius;
+	border-radius: var(--border-radius);
+	background-color: $shine-orange;
+	background-color: var(--shine-orange);
+	font-size: 18px;
+	line-height: 16px;
+	color: #fff;
+	text-align: center;
+	&.dark-button { 
+		background-color: $shine-brand-blue;
+		background-color: var(--shine-brand-blue); 
+	}
+	&.white-button {
+		background-color: #fff;
+		color: $shine-brand-blue;
+		color: var(--shine-brand-blue);
+	}
+	&.large-button {
+		height: 60px;
+	}
+	&.small-button {
+		height: 35px;
+	}
+} 
