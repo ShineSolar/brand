@@ -1,63 +1,92 @@
+// Simple radio button, with two different color styles
 input[type=radio] {
 	border-radius: 50px;
 	&:checked {
-		border: 5.1px solid $shine-orange;
-		border: 5.1px solid var(--shine-orange);
+		border-style: solid;
+		border-width: 6px;
+		border-color: $shine-brand-orange;
+		border-color: var(--shine-brand-orange);
+		&.blue {
+			border-color: $shine-brand-blue;
+			border-color: var(--shine-brand-blue);
+		}
 	}
 }
 
+// Simple checkbox with two different color styles
 input[type=checkbox] {
 	border-radius: $border-radius;
 	border-radius: var(--border-radius);
 	&:checked {
-		background-image: url('/assets/icons/checkmark.svg');
+		background-image: $white-checkmark;
 		background-repeat: no-repeat;
 		background-position: center;
-		background-color: $shine-orange;
-		background-color: var(--shine-orange);
+		background-color: $shine-brand-orange;
+		background-color: var(--shine-brand-orange);
+		border: none;
+		&.blue {
+			background-color: $shine-brand-blue;
+			background-color: var(--shine-brand-blue);
+		}
 	}
 }
 
+// On/Off checkbox switch with two different color styles
 input[type=checkbox].on-off-switch {
+	
 	justify-content: flex-end;
-	margin-right: 10px;
-	height: 32px;
 	width: 70px;
+	height: 32px;
 	border-radius: 50px;
-	background-color: $shine-blue-gray;
-	background-color: var(--shine-blue-gray);
+	border: none;
+	background-image: $white-pill-circle;
+	background-repeat: no-repeat;
+	background-color: $shine-gray-three;
+	background-color: var(--shine-gray-three);
 	background-position-y: center;
-	background-position-x: 4px;
+	background-position-x: 4%;
 	transition: all .1s;
 	font-family: $heavy-font;
 	font-family: var(--heavy-font);
-	&:checked {
-		background-position-x: right;
-		justify-content: flex-start;
-		background-color: $shine-orange;
-		background-color: var(--shine-orange);
-		&::before { display: flex; }
-		&::after { display: none; }
-	}
-	&::before, &::after {
-		display: none;
-		height: 35px;
-		justify-content: center;
-		align-content: center;
-		align-items: center;
-		font-weight: normal;
-		text-transform: uppercase;
-		font-size: 16px;
-		color: $shine-brand-blue;
-		color: var(--shine-brand-blue);
-	}
-	&::before {
-		content: 'on';
-		display: none;
-	}
+
 	&::after {
 		content: 'off';
 		display: flex;
-		margin-right: 6px;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		height: 35px;
+		text-transform: uppercase;
+		font-size: 16px;
+		margin-right: 10px;
+		color: $shine-brand-blue;
+		color: var(--shine-brand-blue);
+		transition: all .1s;
 	}
+
+	&:checked {
+		background-position-x: 94%;
+		background-color: $shine-brand-orange;
+		background-color: var(--shine-brand-orange);
+		&::after {
+			content: 'on';
+			color: #fff;
+			transform: translateX(-29px);
+		}
+	}
+
+	&.blue {
+		&:checked {
+			background-color: $shine-brand-blue;
+			background-color: var(--shine-brand-blue);
+			&::after {
+				color: #fff;
+			}
+		}
+		&::after {
+			color: $shine-brand-blue;
+			color: var(--shine-brand-blue);
+		}
+	}
+
 }

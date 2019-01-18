@@ -1,4 +1,4 @@
-label:not(label.not-form-field) 
+label 
 ,button
 ,input:not([type=checkbox]):not([type=radio])
 ,a.button {
@@ -16,8 +16,11 @@ input[type=radio]
 	-moz-appearance: none;
 	height: 20px;
 	width: 20px;
-	border: 2px solid $shine-blue-gray;
-	border: 2px solid var(--shine-blue-gray);
+	border-style: solid;
+	border-width: 2px;
+	border-color: $shine-gray-two;
+	border-color: var(--shine-gray-two);
+	cursor: pointer;
 	display: flex;
 	justify-content: center;
 	align-content: center;

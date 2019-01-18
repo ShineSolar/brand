@@ -28,6 +28,11 @@ Follow the CSS methodology up above (in short, style the raw elements as much as
 * The styles for the buttons exist under: /src/partials/forms/partials/. I did this (instead of putting them under base) because usually when you're coding buttons, they're in forms. I might change this later, but for right now, that's where they are
 * I wasn't sure what to call my typeface partials, and so I chose `_headings` (pretty obvious, these are all of your `h.*` tags) and `_primary`. `_primary` holds all of the regular typefaces (what goes in everything except your `h*` tags). I'll probably change that later when I come up with a snappier name for it. Until then, know that tip.
 * The partials under responsiveness has every other partial except for responsiveness. Maybe it's just me, but including a `_responsive` partial under `_responsiveness` just seems too much like an infinte loop to me, so it's not getting included. 
+* Every SCSS variable needs to have a corresponding CSS native variable. We are *always* working towards progressive enhancement, and this is a big step. Also, when you use a variable, use this syntax:
+- `background-color: $variable-name-here;`
+- `background-color: var(--variable-name-here);`
+So in browsers that support CSS variables, the variable gets used, but in legacy browsers (we ALL hate you, IE), the fallback will be used.
+* For our brand color variable declarations, the main brand color is called $shine-brand-color (or --shine-brand-color). So for instance, $shine-brand-orange. But then, for each of the brand shades, the variable name is $shine-color-number. With the numbers starting at 1 and incrementing by one by darkness. So, for Shine Solar's lightest blue color, the variable name would $shine-blue-one.
 
 ## TODOs
 * Write the code :)

@@ -4,6 +4,7 @@
 	padding: 0;
 	scroll-behavior: smooth;
 	border: none;
+	contain: strict;
 	&:focus {
 		outline: none;
 	}
@@ -11,9 +12,6 @@
 
 html, body {
 	height: 100%;
-}
-
-body {
-	background-color: $shine-blue-gray;
-	background-color: var(--shine-blue-gray);
+	background-color: $shine-gray-one;
+	background-color: var(--shine-gray-one);
 }

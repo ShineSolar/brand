@@ -1,44 +1,92 @@
-label:not(label.not-form-field) {
-	color: #7d8d9a;
+label {
+
+	color: $shine-gray-six;
+	color: var(--shine-gray-six);
 	font-size: 14px;
 	display: flex;
-	height: auto;
 	flex-flow: column nowrap;
+	height: auto;
+
 	input:not([type=checkbox]):not([type=radio]) {
+
+		width: 95%;
+		max-width: 400px;
+		height: 50px;
+		cursor: text;
 		border-radius: $border-radius;
 		border-radius: var(--border-radius);
 		font-size: 16px;
 		margin-top: 5px;
 		text-indent: 15px;
-		color: $shine-light-gray;
-		color: var(--shine-light-gray);
-		& ~ span {
+		color: $shine-blue-four;
+		color: var(--shine-blue-four);
+		display: flex;
+		flex-flow: row nowrap;
+
+		&.input-shadow { box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2); }
+
+		&::after {
+			content: 'hello';
+			height: 10px;
+			width: 20px;
+			color: black;
+			display: inline-block;
+			font-size: 16px;
+		}
+
+		&::placeholder { 
+			color: $shine-gray-five; 
+			color: var(--shine-gray-five);
+			text-indent: 15px; 
+			font-size: 16px;
+		}
+
+		&::-webkit-input-placeholder { 
+			color: $shine-gray-five; 
+			color: var(--shine-gray-five);
+			text-indent: 15px; 
+			font-size: 16px; 
+		}
+
+		&:-ms-input-placeholder { 
+			color: $shine-gray-five; 
+			color: var(--shine-gray-five);
+			text-indent: 15px; 
+			font-size: 16px; 
+		}
+
+		&::-ms-input-placeholder { 
+			color: $shine-gray-five;
+			color: var(--shine-gray-five); 
+			text-indent: 15px; 
+			font-size: 16px; 
+		}
+
+		& ~ span.invalid {
 			opacity: 0;
-			color: #e74015;
+			color: $error-color;
+			color: var(--error-color);
 			font-size: 12px;
 			line-height: 16px;
 			margin-top: 3px;
 			transition: opacity .1s;
 			cursor: auto;
 		}
-		&.input-shadow { box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2); }
-		&::placeholder { color: #b1bbc2; text-indent: 15px; font-size: 16px;}
-		&::-webkit-input-placeholder { color: #b1bbc2; text-indent: 15px; font-size: 16px; }
-		&:-ms-input-placeholder { color: #b1bbc2; text-indent: 15px; font-size: 16px; }
-		&::-ms-input-placeholder { color: #b1bbc2; text-indent: 15px; font-size: 16px; }
+
+		&.blurred {
+			&:invalid ~ span.invalid {
+				display: inline-block;
+				opacity: 1;
+			}	
+		}
+
 		&:focus {
-			box-shadow: 0 2px 0 0 $shine-orange;
-			box-shadow: 0 2px 0 0 var(--shine-orange);
+			box-shadow: 0 2px 0 0 $shine-brand-orange;
+			box-shadow: 0 2px 0 0 var(--shine-brand-orange);
 			&::placeholder { color: transparent; }
 			&::-webkit-input-placeholder { color: transparent; }
 			&:-ms-input-placeholder { color: transparent; }
-			&::-ms-input-placeholder { color: transparent; }
-			&:invalid {
-				& ~ span {
-					display: inline-block;
-					opacity: 1;
-				}
-			}			
+			&::-ms-input-placeholder { color: transparent; }		
 		}
 	}
 }
