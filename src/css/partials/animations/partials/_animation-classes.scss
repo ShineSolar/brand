@@ -1,0 +1,22 @@
+.fade-up-animation {
+	transform: translateY(40px);
+	opacity: 0;
+	transition: .3s all;
+
+	&.animated {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+}
+
+.loader {
+	height: 30px;
+	width: 30px;
+	background-image: $loading-icon;
+	cursor: default;
+	background-position: center;
+	background-repeat: no-repeat;;
+	background-color: transparent;
+	animation: spin 1s infinite linear;
+}

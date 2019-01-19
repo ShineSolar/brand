@@ -6,15 +6,17 @@
     position: fixed;
     z-index: 9999;
     
-    g#Group-75-Copy {
+    g#outside-circle {
     	transform-origin: center;
     	animation: backwards-spin 3s infinite linear;
     }
   	
-  	g#Group {
+  	g#inside-circle {
     	transform-origin: center;
     	transform-box: fill-box;
     	animation: spin-the-inner-circle 3s infinite linear;
   	}
+
+  	&.loaded { display: none; }
 
 }

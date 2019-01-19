@@ -1,12 +1,12 @@
-const inputsToValidate = document.querySelectorAll('[data-shine-validate]');
-if (inputsToValidate !== null) {
+function FormValidate() {
+	this.form_elements = document.querySelectorAll('[data-shine-validate]');
+}
 
-const numberOfInputsToValidate = inputsToValidate.length;
-
-	for (let i = 0; i < numberOfInputsToValidate; i++) {
-		inputsToValidate[i].addEventListener('blur', function() {
-			inputsToValidate[i].classList.add('blurred');
+FormValidate.prototype.validateElements = function() {
+	const len = this.form_elements.length;
+	for (let i = 0; i < len; i++) {
+		this.form_elements[i].addEventListener('blur', function() { 
+			this.classList.add('blurred'); 
 		}, false);
 	}
-
 }

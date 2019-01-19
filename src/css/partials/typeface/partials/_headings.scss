@@ -3,6 +3,10 @@ h1, h2, h3, h4, h5 {
 	font-family: var(--heavy-font);
 	color: $shine-brand-orange;
 	color: var(--shine-brand-orange);
+	&.blue {
+		color: $shine-brand-blue;
+		color: var(--shine-brand-blue);
+	}
 	& span {
 		font-family: inherit;
 		font-size: inherit;
