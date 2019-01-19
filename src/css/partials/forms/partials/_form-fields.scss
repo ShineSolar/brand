@@ -53,22 +53,33 @@ label {
 			font-size: 16px; 
 		}
 
-		& ~ span.invalid {
+		& ~ .valid {
+			background-image: $gray-checkmark;
+			background-repeat: no-repeat;
+			position: relative;
+			width: 17px;
+			height: 15px;
+			bottom: 27px;
+			left: 93%;
+			z-index: 100;
+		}
+
+		& ~ span {
 			opacity: 0;
 			color: $error-color;
 			color: var(--error-color);
 			font-size: 12px;
 			line-height: 16px;
-			margin-top: 3px;
+			margin-top: -5px;
 			transition: opacity .1s;
 			cursor: auto;
 		}
 
 		&.blurred {
-			&:invalid ~ span.invalid {
+			&:invalid ~ span.invalid, &:valid ~ span.valid {
 				display: inline-block;
 				opacity: 1;
-			}	
+			}
 		}
 
 		&:focus {
