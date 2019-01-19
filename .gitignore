@@ -3,3 +3,4 @@ style.css.map
 .DS_Store
 *.scssc
 vendor/
+test/

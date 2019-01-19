@@ -4,7 +4,8 @@
 	padding: 0;
 	scroll-behavior: smooth;
 	border: none;
-	contain: strict;
+	color: $shine-brand-blue;
+	color: var(--shine-brand-blue);
 	&:focus {
 		outline: none;
 	}
