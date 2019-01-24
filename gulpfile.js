@@ -1,3 +1,4 @@
+const gulp = require('gulp');
 const concat = require('gulp-concat');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
@@ -12,4 +13,14 @@ gulp.task('scripts', () => {
 	.pipe(rename('brand.min.js'))
 	.pipe(uglify())
 	.pipe(gulp.dest(desiredDestination))
+});
+
+var pump = require('pump');
+
+gulp.task('uglify-error-debugging', function (cb) {
+  pump([
+    gulp.src(files),
+    uglify(),
+    gulp.dest(desiredDestination)
+  ], cb);
 });

@@ -3,8 +3,8 @@ function FormValidate() {
 }
 
 FormValidate.prototype.validateElements = function() {
-	const len = this.form_elements.length;
-	for (let i = 0; i < len; i++) {
+	var len = this.form_elements.length;
+	for (var i = 0; i < len; i++) {
 		this.form_elements[i].addEventListener('blur', function() { 
 			this.classList.add('blurred'); 
 		}, false);
