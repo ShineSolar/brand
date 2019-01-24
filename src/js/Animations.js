@@ -29,3 +29,7 @@ ShineAnimation.prototype.countUp = function() {
 	}, stepTime);
 
 }
+
+ShineAnimation.prototype.finishPageLoad = function() {
+	this.element.classList.add('loaded');
+}
