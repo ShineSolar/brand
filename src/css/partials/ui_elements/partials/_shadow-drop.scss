@@ -1,0 +1,22 @@
+.shadow-drop {
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+	height: 105px;
+	width: 200px;
+	flex-flow: column nowrap;
+	justify-content: center;
+
+	span.selection {
+		font-size: 14px;
+		height: 40px;
+		width: 175px;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: bold;
+		transition: all .3s;
+		&:hover { background-color: #f5f6f7; }
+	}
+}
