@@ -1,4 +1,6 @@
-window.onload = function() {
-	const loadingScreen = document.querySelector('.loading-animation');
-	loadingScreen.classList.add('loaded');
-}
+window.addEventListener('load', function() {
+	if (document.querySelector('.loading-animation') !== null) {
+		document.querySelector('.loading-animation').classList.add('loaded');
+	}
+})
+
