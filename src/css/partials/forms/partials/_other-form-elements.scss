@@ -1,6 +1,7 @@
 // Simple radio button, with two different color styles
 input[type=radio] {
 	border-radius: 50px;
+	background-color: #fff;
 	&:checked {
 		border-style: solid;
 		border-width: 6px;
@@ -17,6 +18,7 @@ input[type=radio] {
 input[type=checkbox] {
 	border-radius: $border-radius;
 	border-radius: var(--border-radius);
+	background-color: #fff;
 	&:checked {
 		background-image: $white-checkmark;
 		background-repeat: no-repeat;

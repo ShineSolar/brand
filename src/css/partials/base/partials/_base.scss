@@ -6,6 +6,7 @@
 	border: none;
 	color: $shine-brand-blue;
 	color: var(--shine-brand-blue);
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	&:focus {
 		outline: none;
 	}

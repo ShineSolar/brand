@@ -23,7 +23,9 @@ label {
 		display: flex;
 		flex-flow: row nowrap;
 
-		&.input-shadow { box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2); }
+		&.input-shadow { 
+			box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2); 
+		}
 
 		&::placeholder { 
 			color: $shine-gray-five; 
