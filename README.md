@@ -1,4 +1,4 @@
-# Shine Solar Brand CSS
+# Shine Solar Brand
 Shine Solar is at that point now where it needs to have an incredibly more consistent brand and with a stud developer and a stud designer, we're at a point where we can include a brand CSS stylesheet that will do just that. The purpose of this branded CSS library is to make on-brand development of web projects more efficient and more consistent. This brand CSS library is built on SCSS (with specific conventions, more on that in a minute) and will be created as a "drag and drop" stylesheet that *must* be included on every single Shine Solar web project. Read on for the CSS methodology used, the naming conventions for writing the code, and some gotchas and tips for navigating this library!
 
 ## CSS Methodology
