@@ -4,3 +4,4 @@ style.css.map
 *.scssc
 vendor/
 test/
+node_modules/
